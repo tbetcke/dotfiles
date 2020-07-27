@@ -26,7 +26,7 @@ font pango:monospace 10
 # screen before suspend. Use loginctl lock-session to lock your screen.
 exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock -n -i /home/betcke/backgrounds/stars_planet.png
 
-exec --no-startup-id light -S 5
+exec --no-startup-id light -S 30
 
 # Pulse Audio volume control
 exec --no-startup-id pasystray
@@ -180,6 +180,18 @@ bindsym $mod+Shift+c reload
 bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
+
+# Scratchpad
+bindsym $mod+Shift+minus move scratchpad
+for_window [title="htop-scratchpad"] move scratchpad
+exec --no-startup-id xfce4-terminal -e htop -T htop-scratchpad
+
+for_window [title="ranger-scratchpad"] move scratchpad
+exec --no-startup-id xfce4-terminal -e ranger -T ranger-scratchpad
+
+bindsym $mod+minus scratchpad show
+bindsym $mod+Control+h [title="htop-scratchpad"] scratchpad show
+bindsym $mod+Control+r [title="ranger-scratchpad"] scratchpad show
 
 # resize window (you can also use the mouse for that)
 mode "resize" {

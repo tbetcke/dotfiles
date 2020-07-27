@@ -53,9 +53,11 @@ enable-scroll = true
 type = internal/battery
 battery = BAT0
 adapter AC
+full-at = 99
 time-format = %H:%M
 format-charging = <label-charging>
 format-discharging = <label-discharging>
+format-full = <label-full>
 label-charging = Charging %percentage%%
 label-discharging = Discharging %percentage%% %time%
 label-full = Fully charged
