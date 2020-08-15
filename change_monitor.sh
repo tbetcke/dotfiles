@@ -1,6 +1,6 @@
 #!/bin/sh
 
-option=$(echo -e "Internal\nOnly external\nExtended" | rofi -dmenu)
+option=$(echo -e "Only Internal\nOnly External\nExtended" | dmenu)
 ret=$?
 
 if [[ $ret -eq 0 ]]
@@ -9,11 +9,11 @@ then
 	then
 		mons -e right
 		feh --bg-scale /home/betcke/backgrounds/wallpaper.jpg /home/betcke/backgrounds/wallpaper.jpg
-	elif [[ $option == "Only external" ]]
+	elif [[ $option == "Only External" ]]
 	then
 		mons -s
 		feh --bg-scale /home/betcke/backgrounds/wallpaper.jpg
-	elif [[ $option == "Internal" ]]
+	elif [[ $option == "Only Internal" ]]
 	then
 		mons -o
 		feh --bg-scale /home/betcke/backgrounds/wallpaper.jpg
