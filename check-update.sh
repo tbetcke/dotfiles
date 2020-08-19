@@ -1,6 +1,6 @@
 #!/bin/bash
 
-updates=$(($(dnf check-update -q | wc -l) - 1))
+updates=$(($(dnf check-update -q | wc -l 2>/dev/null) - 1))
 ret=$?
 
 if [ "$ret" -gt 0 ]; then
