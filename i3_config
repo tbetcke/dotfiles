@@ -78,8 +78,8 @@ bindsym XF86MonBrightnessUp exec "light -A 5"
 bindsym XF86MonBrightnessDown exec "light -U 5"
 
 # Configure arandr
-bindsym $mod+m exec arandr
-for_window [class="Arandr"] floating enable
+#bindsym $mod+m exec arandr
+#for_window [class="Arandr"] floating enable
 
 # Monitor Switcher
 bindsym $mod+p exec change_monitor.sh
