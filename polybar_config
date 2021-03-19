@@ -25,23 +25,17 @@ monitor =
 ; module-margin = 3
 
 ; modules-center = date
-modules-right = date dnf-updates backlight battery 
-modules-left = i3 cpu memory
+modules-right = date backlight battery 
+modules-left = cpu memory
 screenchange-reload = true
 tray-position = right
 tray-padding = 2
-tray-background = ${colors.shade5}
+tray-background = ${colors.shade1}
 
 background = ${colors.background}
 
 height = 30
 
-[module/i3]
-type = internal/i3
-format = <label-state> <label-mode>
-index-sort = true
-wrapping-scroll = false
- 
 ; Only show workspaces on the same output as the bar
 ;pin-workspaces = true
  
@@ -132,19 +126,12 @@ format-background = ${colors.shade1}
 label = %date% %time%
 ; label-font = 0
 
-[module/dnf-updates]
-type = custom/script
-exec = ~/.local/bin/check-update.sh
-interval = 1000
-format-background = ${colors.shade2}
-format-padding = 2
-
 [module/backlight]
 type = internal/backlight
 card = intel_backlight
 format = Backlight: <label>
 format-padding = 2
-format-background = ${colors.shade3}
+format-background = ${colors.shade1}
 label = %percentage%%
 
 enable-scroll = true
@@ -152,13 +139,13 @@ enable-scroll = true
 [module/battery]
 type = internal/battery
 battery = BAT0
-adapter AC
+adapter = AC
 full-at = 99
 time-format = %H:%M
 format-charging-padding = 2
 format-discharging-padding = 2
-format-charging-background = ${colors.shade4}
-format-discharging-background = ${colors.shade4}
+format-charging-background = ${colors.shade1}
+format-discharging-background = ${colors.shade1}
 format-charging = <label-charging>
 format-discharging = <label-discharging>
 format-full = <label-full>
@@ -172,7 +159,7 @@ label-full = Fully charged
 type = internal/network
 interface = eno1
 format-connected = <label-connected>
-format-connected-background = ${colors.shade5}
+format-connected-background = ${colors.shade1}
 label-connected = %ifname% %local_ip%
 
 

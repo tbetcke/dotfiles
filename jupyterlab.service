@@ -1,0 +1,11 @@
+[Unit]
+Description=Jupyter Notebook
+
+[Service]
+Type=simple
+ExecStart=/home/betcke/.local/bin/jupyterlab_service.sh
+WorkingDirectory=/home/betcke/notebooks
+
+[Install]
+WantedBy=default.target
+

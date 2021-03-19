@@ -1,0 +1,8 @@
+{
+    "python.linting.enabled": "true",
+    "python.linting.flake8Enabled": "true",
+    "python.formatting.provider": "black",
+    "python.venvPath": "/home/betcke/miniconda3/envs",
+    "coc.preferences.formatOnSaveFiletypes": ["python"]
+}
+
